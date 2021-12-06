@@ -1,9 +1,9 @@
-##Concurrent web-crawling and data aggregation using goroutines
+# Concurrent web-crawling and data aggregation using goroutines
 
 
 Implement a Golang application that receives from command line 1) a URL of a web page, 2) a MaxRoutines number - the maximal number of goroutines, 3) MaxIndexingTime - the maximal allowed time for indexing, 4) base result files name (default "results.json”), 5) MaxResults - the maximum number of resources processed (crawled and indexed)
 
-PHASE I: Indexing
+## PHASE I: Indexing
 1. Traverse the connected pages starting from the URL provided and following the hyperlinks in these web pages. Separate goroutines should be used to speed up the traversal process. You could use breadth-first-search, or custom heuristics to prioritize the search pages.
 
 2. The number of goroutines working in parallel should not exceed MaxRoutines number in any moment during the program execution.
@@ -14,7 +14,7 @@ PHASE I: Indexing
 
 5. The maximal search time should not exceed the specified MaxIndexingTime.
 
-PHASE II: Search
+## PHASE II: Search
 6. Input a list of search keywords from console and find the most relevant web pages to keywords. Output the sorted list of most relevant top 10 resources with relevance percentage and metadata to console in human readable form. You can repeat this step with multiple keywords combinations.
 
 * When indexing pages you can skip the so-called stop words, such as (please extend the list as appropriate):
